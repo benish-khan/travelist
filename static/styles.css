@@ -1,0 +1,18 @@
+#map {
+    width: 950px;
+    height: 600px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+}
+
+body {background-color: #E0BF7D;}
+
+h2 {font-family: 'Cormorant Unicase', serif;}
+
+h1 {font-family: 'Cormorant Unicase', serif;}
+
+body {font-family: 'Cormorant Unicase', serif;}
+
+

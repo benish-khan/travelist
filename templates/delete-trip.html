@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<html>
+  <body>
+  
+    <h2> Enter the City and State of trip to delete.</h2>
+    <h2> Enter the trip to delete.</h2>
+
+    <form method="POST" action="/delete-trip">
+      <input type="text" name="city" required>
+      <input type="text" name="state" required>
+      <input type="submit" value="Delete Trip">
+      <a href="/user">Back to my trips!</a>
+    </form>
+
+  </body>
+</html>
+
+{% endblock %}

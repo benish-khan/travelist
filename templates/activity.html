@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<html>
+  <body>
+    <h2>Current activities:</h2>
+
+    {% for activity in activities %}
+      <ul>
+            <p>Category: {{ activity.category }} | Description: {{ activity.description }}</p>
+      </ul>
+    {% endfor %}            
+
+  
+    
+    <div>
+    <h2>Keep planning:</h2>
+    <form method="POST" action="/activities/{{ trip_id }}">
+      <select name="category">
+        <option value="Pick a category">Pick a category</option>
+        <option value="Eat">Eat</option>
+        <option value="Buy">Buy</i></option>
+        <option value="Visit">Visit</option>
+      </select><br>
+      <input type="text" name="description" required>
+ 
+      <input type="submit" value="Add activity">
+        </form>
+    </div>
+
+  </body>
+</html>
+
+
+<!-- script tag for jquery  -->
+<script>
+</script>
+
+{% endblock %}

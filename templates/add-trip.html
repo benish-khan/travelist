@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<html>
+  <body>
+    <h2> Check out your current trips!</h2>
+
+
+
+    <h2> Ready to plan your trip? Click on Add Trip to get started.</h2>
+
+    <form id="add-trip" method="POST" action="/add-activity">
+      <input type="text" name="city" id="city" required>
+      <input type="text" name="state" id="state" required>
+      <input type="submit" value="Add trip">
+    </form>
+  </body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script src="/static/script.js"></script>
+
+{% endblock %}

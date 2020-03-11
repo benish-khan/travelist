@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<html>
+  <body>
+
+    <h2> Delete activity below.</h2>
+
+    <form method="POST" action="/delete-activity">
+      <input type="text" name="category" required>
+      <input type="text" name="description" required>
+      <input type="submit" value="Delete Activity">
+    </form>
+  </body>
+</html>
+
+{% endblock %}

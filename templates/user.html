@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <h2> Current trips:</h2><br>
+                <ul id="trips">
+        
+                {% for trip in trips %}
+                <p>{{ trip.city }} {{ trip.state }} | <a href="/user/{{ trip.trip_id }}"> <i class="fa fa-heart"></i></a></p> 
+                {% endfor %}
+                </ul>  
+
+
+                <div class="card">
+                    <div class="card-body">
+                    <form id="add-trip" method="POST" action="/add-trip">
+                    <p>Enter city: i.e. San Francisco</p>
+                    <input type="text" name="city" id="city" required>
+                    <p>Enter state: i.e. California</p>
+                    <input type="text" name="state" id="state" required>
+                    <input type="submit" value="Add trip">
+                    <a href="/update-trip">Update a trip</a> | <a href="/delete-trip">Delete a trip</a><br>
+                    </form>
+
+                    </div>
+                    </div>
+            </div>
+
+        <div class="col-9">
+        <div id="map"></div>
+    </div>
+
+    
+    
+         
+
+     
+    
+
+</div>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEtBxlWamg_eBoAUrffjaDesPJPx98jQk"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+
+<script src="/static/script.js"></script>
+<script src="/static/trip-map.js"></script>
+
+
+{% endblock %}
+
+
+

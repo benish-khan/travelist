@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Travel:list</h1>
+
+<div class="container">
+    <div class="card">
+    <h1>Sign up below:</h1>
+    <div class="card-body">
+     <form action='/register', id="register" method="POST">
+        <input type="text" placeholder="BeBe" name="name" required>
+        <input type="text" placeholder="example@gmail.com" name="email" required>
+        <input type="text" placeholder="idontknow" name="password" required>
+        <input type="submit" value="Login">
+        </form>
+
+</div>
+
+    <div class="container"> 
+    <img src="/static/world.png" class=".mx-auto .d-block" style="width:100%"> 
+    </div>
+
+    
+
+
+
+    <!-- <form action="/register" method="POST">
+
+        <div>
+            <label>
+            Enter your name:    
+        <input type="name" name="name" required><br>
+            </label>
+        </div>
+
+        <div>  
+            <lable>
+            Enter your email address:
+        <input type="email" name="email" required> <br>
+            </label>
+        </div>
+        
+        <div>
+            <label>    
+        Create a password:
+        <input type="password" name="password" required>
+            </label>
+        </div>
+
+        <div>
+        <input type="submit" value="Lets get this party started!">
+        </div>
+
+    </form> -->
+    
+{% endblock %}  

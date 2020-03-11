@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<html>
+    <body>
+
+    <h2> Type the new city and state you would like to update for this trip</h2>
+    <form method="POST" action="/update-trip">
+      <input type="text" name="city">
+      <input type="text" name="state">
+      <input type="submit" value="Update">
+    </form>
+      
+    <h2> Confirming the following trip has been updated!</h2>
+            <p>{{ trip.city }}{{ trip.state }}</p>
+
+    </body>
+</html>
+
+{% endblock %}

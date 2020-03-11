@@ -1,0 +1,28 @@
+ {% extends 'base.html' %}
+{% block content %}
+
+    <form action="/update-trip" method="POST">
+
+        <div>
+            <label>
+            Enter the trip to update city/state:<br>  
+        <input type="text" name="city" required><br>
+        <input type="text" name="state" required><br>
+            </label>
+        </div>
+
+        <div>  
+            <lable>
+            Enter the updated version city/state:<br>
+        <input type="text" name="new_city" required><br>
+        <input type="text" name="new_state" required><br>
+            </label>
+        </div>
+        
+        <div>
+        <input type="submit" value="Update Trip">
+        </div>
+
+    </form>
+    
+{% endblock %}  

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<html>
+  <body>
+    <h2> Check out your current trips!</h2>
+
+
+
+    <h2> Ready to plan fun activities for your trip? Click on Add activity to get started.</h2>
+
+    <form action="/update-activity" method="POST">
+
+        <div>
+             <label>
+             Enter the activity to update below:   
+        <input type="text" name="category" required>
+        <input type="text" name="description" required>
+            </label>
+        </div>
+        <div>
+            <label>   
+            Enter the updated category/description:<br>
+        <input type="text" name="new_category" required>
+        <input type="text" name="new_description" required>
+            </label>
+        </div>
+        
+        <div>
+        <input type="submit" value="Update Activity">
+        </div>       
+
+    </form>
+    
+  </body>
+</html>
+
+{% endblock %}
