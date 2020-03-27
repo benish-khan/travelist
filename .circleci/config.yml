@@ -1,18 +1,27 @@
 version: 2.1
-orbs:
-  python: circleci/python@0.2.1
 jobs:
-  build-and-test:
-    executor: python/default
+  build:
+    docker: 
+      - image: circleci/python:latest
+      #environment: 
+        #FLASK_CONFIG: testing
+        #TEST_DATABASE_URL: reference --> https://circleci.com/docs/2.0/project-walkthrough/
+     # - image: circleci/postgres:9.6.5-alpine-ram
+     #environment:
+     # POSTGRES_USER: 
+     # POSTGRES_DB: 
+     # POSTGRES_PASSWORD: " "
     steps:
       - checkout
-      #- python/load-cache
-      #- python/install-deps
-      #- python/save-cache
-      #- #run:
-          #command: ./manage.py test
-          #name: Test
+      - run:
+          name: Install Python deps in a venv
+          command: |
+          virtualenv venv
+          pip install -r requirments.txt
+          export FLASK_APP=server.py
+          export FLASK_ENV=development
 workflows:
   main:
     jobs:
-      -  build-and-test
+      -  build
+      
